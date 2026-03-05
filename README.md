@@ -1,5 +1,4 @@
-> 🎁 **Referral Link:** [https://cedomis.xyz/signup?referralCode=saddemmejri](https://cedomis.xyz/signup?referralCode=saddemmejri)  
-> Sign up using the referral link above to support the project!
+<!-- referral: https://cedomis.xyz/signup?referralCode=saddemmejri -->
 
 ---
 
