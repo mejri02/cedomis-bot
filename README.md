@@ -4,7 +4,7 @@
 
 # 🤖 cedomis-bot
 
-An automated bot for [Cedomis](https://cedomis.xyz) that handles daily login reward claiming and blog quiz completion across multiple accounts with optional proxy support.
+An automated bot for [Cedomis](https://cedomis.xyz) that handles daily login reward claiming and quest completion across multiple accounts with optional proxy support.
 
 ---
 
@@ -12,7 +12,7 @@ An automated bot for [Cedomis](https://cedomis.xyz) that handles daily login rew
 
 - 🔑 **Multi-account support** — load unlimited tokens from a file
 - 🎁 **Daily login auto-claim** — checks and claims daily rewards automatically
-- 📚 **Blog quiz solver** — fetches blog posts, solves quizzes using Groq AI, and submits answers
+- 📚 **Quest solver** — fetches active quests, answers questions using Groq AI, and submits results
 - 🌐 **Proxy support** — SOCKS5 proxies, rotated across accounts
 - ⏰ **Smart scheduling** — sleeps until the earliest next claim time, then restarts
 - 🎨 **Colored terminal output** — clear logging with timestamps and status types
@@ -48,6 +48,8 @@ gsk_your_groq_api_key_here
 ```
 
 Get your free key at: [https://console.groq.com](https://console.groq.com)
+
+> The bot uses the `llama-3.3-70b-versatile` model to answer quest questions automatically.
 
 ---
 
@@ -86,10 +88,11 @@ node index.js
 ```
 
 The bot will:
-1. Load all tokens and proxies
-2. For each account: fetch profile → claim daily reward → solve & submit blog quizzes
-3. Sleep until the earliest next daily claim time
-4. Restart automatically
+1. Ask whether to use proxies
+2. Load all tokens and proxies
+3. For each account: fetch profile → claim daily reward → solve & submit quests
+4. Sleep until the earliest next daily claim time
+5. Restart automatically
 
 ---
 
@@ -112,8 +115,9 @@ cedomis-bot/
 [2024-01-15 12:00:00] [BOT]     🔰 PROCESSING: eyJhbGciOiJI...
 [2024-01-15 12:00:01] [SUCCESS] ✅ Profile: username123
 [2024-01-15 12:00:02] [REWARD]  ✅✅✅ DAILY REWARD CLAIMED!
-[2024-01-15 12:00:05] [QUEST]   📌 Introduction to DeFi
-[2024-01-15 12:00:08] [REWARD]  ✅✅✅ QUIZ SUBMITTED!
+[2024-01-15 12:00:05] [QUEST]   📌 Introduction to NFTs (500 XP)
+[2024-01-15 12:00:08] [SUCCESS] ✅ Correct! (3/3)
+[2024-01-15 12:00:09] [REWARD]  🎉 +500 XP earned!
 [2024-01-15 12:00:10] [TIMER]   ⏰ Wake at: 2024-01-16 12:05:00 (23h 59m)
 ```
 
@@ -129,3 +133,4 @@ This project is for educational purposes only. Use at your own risk and in accor
 
 **mejri02**  
 GitHub: [https://github.com/mejri02](https://github.com/mejri02)
+

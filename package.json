@@ -1,26 +1,17 @@
 {
   "name": "cedomis-bot",
-  "version": "3.0.0",
-  "description": "Cedomis automation bot - Daily login & quizzes",
-  "main": "cedomis-bot.js",
+  "version": "1.0.0",
+  "description": "Cedomis Quest Auto-Complete Bot",
+  "main": "bot.js",
   "scripts": {
-    "start": "node cedomis-bot.js",
-    "pm2": "pm2 start cedomis-bot.js --name cedomis-bot",
-    "pm2-stop": "pm2 stop cedomis-bot",
-    "pm2-logs": "pm2 logs cedomis-bot",
-    "pm2-monit": "pm2 monit"
-  },
-  "keywords": ["cedomis", "bot", "automation", "web3", "daily-login", "quizzes"],
-  "author": "mejei02",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mejei02/cedomis-bot"
+    "start": "node bot.js"
   },
   "dependencies": {
-    "socks-proxy-agent": "^8.0.4"
+    "socks-proxy-agent": "^8.0.2"
   },
   "engines": {
-    "node": ">=18.0.0"
-  }
+    "node": ">=14.0.0"
+  },
+  "author": "@mejei02",
+  "license": "MIT"
 }
